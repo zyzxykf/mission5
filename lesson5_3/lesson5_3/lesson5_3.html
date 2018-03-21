@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lesson5-2</title>
+	
+	<script type="text/javascript">
+		var init = new Array("a","x", "b", "d", "m", "a", "k", "m", "p", "j", "a", "a");
+		
+
+		(function (init) {
+			var wrap = {};
+			var key;
+			for (var i = 0; i < init.length; i++) {
+				if (wrap[init[i]] == undefined) {
+					wrap[init[i]] = new Array();
+				}
+				wrap[init[i]].push(i);
+			}
+
+			var wrapArray = Object.keys(wrap);
+		
+			key = wrapArray[0];
+
+			for (var i = 1; i < wrapArray.length; i++ ) {
+				if ( wrap[wrapArray[i]].length > wrap[key].length ) {
+					key = wrapArray[i];
+				}
+			}
+
+			console.log("出现最多字符串的是：",key,"及每一个所在位置：", wrap[key]);
+		})(init);
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lesson5-2</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script type="text/javascript">
+		alert("执行方式请在console按照:cal(数字,数字,'运算符');");
+		function cal(x, y, char1) {
+			if(!isNaN(arguments[0]) && !isNaN(arguments[1])) {
+				switch(char1) {
+					case "+":
+						return x+y;
+					case "-":
+						return x-y;
+					case "*":
+						return x*y;
+					case "/":
+						if (y == 0) {
+							return "除数不应为0，请重新输入；";
+						}
+						return x/y;
+					default:
+						return "请正确输入运算符，如('+', '-', '*','/');";
+				}
+			} else {
+				return "请正确输入运算数字；";
+			}
+			
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
